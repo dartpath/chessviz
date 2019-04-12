@@ -1,4 +1,5 @@
 #include "board.h"
+#include <stdio.h>
 
 void create_board(char arr[][9])
 {
@@ -46,5 +47,14 @@ void create_board(char arr[][9])
     for (int i = 1; i < 9; i++) {
         arr[1][i] = 'p';
         arr[6][i] = 'P';
+    }
+}
+
+void print_board(char arr[][9])
+{
+    for (int i = 0; i <= 8; i++) {
+        for (int j = 0; j <= 8; j++)
+            printf("%c", arr[i][j]);
+        printf("\n");
     }
 }
