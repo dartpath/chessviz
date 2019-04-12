@@ -8,6 +8,8 @@ void create_board(char arr[][9])
             arr[i][j] = ' ';
         }
     }
+    
+    arr[8][0] = ' ';
     arr[0][1] = 'r';
     arr[0][2] = 'n';
     arr[0][3] = 'b';
@@ -52,8 +54,8 @@ void create_board(char arr[][9])
 
 void print_board(char arr[][9])
 {
-    for (int i = 0; i <= 8; i++) {
-        for (int j = 0; j <= 8; j++)
+    for (int i = 0; i < 9; i++) {
+        for (int j = 0; j < 9; j++)
             printf(" %c", arr[i][j]);
         printf("\n");
     }
